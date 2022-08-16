@@ -8,7 +8,7 @@ const Search = () => {
 
   const onChangeSearch = query => setSearchQuery(query);
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Appbar.Header style={{backgroundColor: '#f6f6f6'}}>
         <Appbar.BackAction />
 
@@ -18,9 +18,8 @@ const Search = () => {
             fontSize: 30,
             fontWeight: 'bold',
             marginRight: 40,
-            paddingTop:30,
+            paddingTop: 30,
             textAlign: 'center',
-            
           }}
         />
       </Appbar.Header>
@@ -35,7 +34,7 @@ const Search = () => {
           marginRight: 10,
         }}
       />
-      <ScrollView style={styles.scroll}>
+      <View style={styles.scroll}>
         <View>
           <Text style={styles.card}>Search Results</Text>
         </View>
@@ -45,7 +44,7 @@ const Search = () => {
             backgroundColor: 'gray',
             marginLeft: 25,
             marginRight: 25,
-            color:'black'
+            color: 'black',
           }}
         />
         <View>
@@ -147,8 +146,8 @@ const Search = () => {
             marginRight: 18,
           }}
         />
-      </ScrollView>
-    </View>
+      </View>
+    </ScrollView>
   );
 };
 
@@ -166,8 +165,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginLeft: 30,
     borderBottomWidth: 1,
-    color:'black'
-
+    color: 'black',
   },
 });
 

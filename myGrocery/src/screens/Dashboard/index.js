@@ -1,6 +1,12 @@
 import {StatusBar} from 'expo-status-bar';
 import React from 'react';
-import {StyleSheet, Text, View,ScrollView, TouchableOpacity} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
 import navigation from '@react-navigation/native';
 
 const Dashboard = () => {
@@ -20,7 +26,7 @@ const Dashboard = () => {
             backgroundColor: '#24ce85',
             paddingTop: 60,
             fontWeight: 'bold',
-            color:'black'
+            color: 'black',
           }}>
           Dashboard
         </Text>
