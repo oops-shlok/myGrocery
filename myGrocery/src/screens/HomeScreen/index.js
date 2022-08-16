@@ -5,6 +5,8 @@ import {StyleSheet, Text, View, Image} from 'react-native';
 import {Button, Searchbar, ToggleButton} from 'react-native-paper';
 import ModalDropdown from 'native-drop-down';
 import {StatusBar} from 'expo-status-bar';
+import {Icon} from 'react-native-vector-icons/Icon';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 
 const Home = ({navigation}) => {
   const [value, setValue] = React.useState('left');
@@ -12,17 +14,13 @@ const Home = ({navigation}) => {
     <ScrollView>
       <View style={styles.container}>
         <Text style={styles.title}>myGrocery</Text>
-        <ToggleButton.Group
-          onValueChange={value => setValue(value)}
-          value={value}>
-          <ToggleButton
-            icon="format-align-right"
-            value="right"
-            style={{marginLeft: 300, marginTop: -45}}
-            onPress={() => navigation.navigate('Dashboard')}
-          />
-        </ToggleButton.Group>
-        <Searchbar style={styles.search} />
+        <TouchableOpacity onPress={() => navigation.navigate('Dashboard')}>
+          <Image
+            source={require('../../assets/h.jpeg')}
+            style={{width: 30, height: 15, marginLeft: 320}}></Image>
+        </TouchableOpacity>
+
+        <Searchbar style={styles.search} clearIcon={true} icon={true} />
       </View>
       <View>
         <Text
@@ -267,7 +265,7 @@ const Home = ({navigation}) => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 145,
+    height: 165,
     backgroundColor: '#20cf85',
     color: 'black',
   },
@@ -288,6 +286,7 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     marginLeft: 10,
     marginRight: 10,
+    marginTop: 10,
     height: 40,
     color: 'black',
   },

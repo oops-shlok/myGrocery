@@ -17,8 +17,8 @@ const Search = () => {
           titleStyle={{
             fontSize: 30,
             fontWeight: 'bold',
-            marginRight: 40,
-            paddingTop: 30,
+            // marginRight: 40,
+            paddingTop: 10,
             textAlign: 'center',
           }}
         />
@@ -33,6 +33,8 @@ const Search = () => {
           marginLeft: 10,
           marginRight: 10,
         }}
+        clearIcon={true}
+        icon={true}
       />
       <View style={styles.scroll}>
         <View>
